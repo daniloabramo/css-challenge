@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #1B1834;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    width: clamp(15rem, 20rem, 23rem);
+    height: clamp(15rem, 20rem, 23rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: clamp(0.5rem, 1rem, 1.5rem);
+    background: linear-gradient(45deg, #1815b9,#119abd, #20d2ff);
+    padding-bottom: 10px;    
+}
+
+.number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.8rem;
+
+}
+
+.zero{
+    width: clamp(3rem, 5.5rem, 7rem);
+    height: clamp(6rem, 6.7rem, 7rem);
+    border-radius: 30rem;
+    border: 1.3rem solid white;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+h2{
+    font-family: 'Roboto';
+    font-size: clamp(7rem, 9rem, 10rem);
+    line-height:  clamp(7rem, 8rem, 9rem);
+    font-weight: 900;
+    text-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+    transform: translateX(0.8rem);
+}
+
+
+h3{
+    font-family: 'Bree Serif';
+    text-transform:uppercase;
+    font-size: clamp(2.5rem, 3.5rem, 3.6rem);
+    letter-spacing: 0.35rem;
+    line-height: clamp(2.5rem, 3rem, 3rem);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+
+
+}
+
+h1{
+    font-family: 'Bree Serif';
+    text-transform:uppercase;
+    font-weight: 500;
+    font-size: clamp(1rem, 2rem, 3rem);
+    line-height: clamp(1rem, 2rem, 2.5rem);;
+
+
+}
