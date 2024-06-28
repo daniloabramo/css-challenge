@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1B1834;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(247, 247, 247);
+}
+
+.container{
+    width: clamp(15rem, 20rem, 23rem);
+    height: clamp(15rem, 20rem, 23rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: clamp(0.5rem, 1rem, 1.5rem);
+    background: rgb(230, 230, 230);
+    padding-bottom: 10px;    
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.loader-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-container .loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader-shapes-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.loader-shapes-container .crown-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: crown-fade 2.5s cubic-bezier(.09,.47,.27,1) infinite;
+  opacity: 0;
+}
+
+.loader-shapes-container .gradient-circle {
+  transform: rotate(-90deg);
+  animation: rotate-circle 5s linear infinite;
+}
+
+.loader-shapes-container .gradient-circle .progress-circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 1.1;
+  stroke-dasharray: 63;
+  stroke-dashoffset: 63;
+  animation: stroke-growing 5s linear infinite;
+}
+
+
+
+@keyframes crown-fade {
+  20% {
+    opacity: 0;
+    width: 35%;
+  }
+  40% {
+    opacity: 1;
+    width: 50%;
+  }
+  60% {
+    opacity: 1;
+    width: 50%;
+  }
+  80% {
+    opacity: 0;
+    width: 35%;
+  }
+}
+
+@keyframes rotate-circle {
+  0% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(130deg);
+  }
+  100% {
+    transform: rotate(630deg);
+  }
+}
+
+@keyframes stroke-growing {
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 63;
+  }
+}
